@@ -1,0 +1,122 @@
+[
+  {
+    "model": "app.inmueble",
+    "pk": 2,
+    "fields": {
+      "nombre": "Diego Inn",
+      "direccion": "San Diego 115",
+      "descripcion": "Departamento Amoblado",
+      "imagen": "inmueble_1.jpeg",
+      "precio": "600000",
+      "comuna": "Santiago Centro",
+      "disponible": true,
+      "m2_construidos": "160.00",
+      "m2_terreno": "170.00",
+      "cantidad_de_estacionamientos": 1,
+      "cantidad_de_habitaciones": 2,
+      "cantidad_banos": 1,
+      "tipo_de_inmueble": "departamento",
+      "propietario": 5
+    }
+  },
+  {
+    "model": "app.inmueble",
+    "pk": 3,
+    "fields": {
+      "nombre": "Diego Inn",
+      "direccion": "San Diego 115",
+      "descripcion": "Departamento Amoblado",
+      "imagen": "inmueble_1.jpeg",
+      "precio": "600000",
+      "comuna": "Santiago Centro",
+      "disponible": true,
+      "m2_construidos": "160.00",
+      "m2_terreno": "170.00",
+      "cantidad_de_estacionamientos": 1,
+      "cantidad_de_habitaciones": 2,
+      "cantidad_banos": 1,
+      "tipo_de_inmueble": "departamento",
+      "propietario": 6
+    }
+  },
+  {
+    "model": "app.inmueble",
+    "pk": 4,
+    "fields": {
+      "nombre": "Diego Inn",
+      "direccion": "San Diego 115",
+      "descripcion": "Departamento Amoblado",
+      "imagen": "inmueble_1.jpeg",
+      "precio": "600000",
+      "comuna": "Santiago Centro",
+      "disponible": true,
+      "m2_construidos": "160.00",
+      "m2_terreno": "170.00",
+      "cantidad_de_estacionamientos": 1,
+      "cantidad_de_habitaciones": 2,
+      "cantidad_banos": 1,
+      "tipo_de_inmueble": "departamento",
+      "propietario": 7
+    }
+  },
+  {
+    "model": "app.inmueble",
+    "pk": 5,
+    "fields": {
+      "nombre": "Diego Inn",
+      "direccion": "San Diego 115",
+      "descripcion": "Departamento Amoblado",
+      "imagen": "inmueble_1.jpeg",
+      "precio": "600000",
+      "comuna": "Santiago Centro",
+      "disponible": true,
+      "m2_construidos": "160.00",
+      "m2_terreno": "170.00",
+      "cantidad_de_estacionamientos": 1,
+      "cantidad_de_habitaciones": 2,
+      "cantidad_banos": 1,
+      "tipo_de_inmueble": "departamento",
+      "propietario": 8
+    }
+  },
+  {
+    "model": "app.inmueble",
+    "pk": 6,
+    "fields": {
+      "nombre": "Diego Inn",
+      "direccion": "San Diego 115",
+      "descripcion": "Departamento Amoblado",
+      "imagen": "inmueble_1.jpeg",
+      "precio": "600000",
+      "comuna": "Santiago Centro",
+      "disponible": true,
+      "m2_construidos": "160.00",
+      "m2_terreno": "170.00",
+      "cantidad_de_estacionamientos": 1,
+      "cantidad_de_habitaciones": 2,
+      "cantidad_banos": 1,
+      "tipo_de_inmueble": "departamento",
+      "propietario": 9
+    }
+  },
+  {
+    "model": "app.inmueble",
+    "pk": 7,
+    "fields": {
+      "nombre": "Diego Inn",
+      "direccion": "San Diego 115",
+      "descripcion": "Departamento Amoblado",
+      "imagen": "inmueble_1.jpeg",
+      "precio": "600000",
+      "comuna": "Santiago Centro",
+      "disponible": true,
+      "m2_construidos": "160.00",
+      "m2_terreno": "170.00",
+      "cantidad_de_estacionamientos": 1,
+      "cantidad_de_habitaciones": 2,
+      "cantidad_banos": 1,
+      "tipo_de_inmueble": "departamento",
+      "propietario": 10
+    }
+  }
+]

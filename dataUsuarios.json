@@ -1,0 +1,82 @@
+[
+    {
+        "model": "app.usuario",
+        "pk": 5,
+        "fields": {
+          "nombres": "Siober",
+          "apellidos": "Sanchez",
+          "rut": "265152161",
+          "direccion": "Calle San Francisco",
+          "telefono": "959538830",
+          "tipo_usuario": "arrendatario",
+          "correo_electronico": "sior@correo.cl"
+        }
+      },
+      {
+        "model": "app.usuario",
+        "pk": 6,
+        "fields": {
+          "nombres": "Siober",
+          "apellidos": "Sanchez",
+          "rut": "265152165",
+          "direccion": "Calle San Francisco",
+          "telefono": "959538830",
+          "tipo_usuario": "arrendatario",
+          "correo_electronico": "ber@correo.cl"
+        }
+      },
+      {
+        "model": "app.usuario",
+        "pk": 7,
+        "fields": {
+          "nombres": "Siober",
+          "apellidos": "Sanchez",
+          "rut": "265152162",
+          "direccion": "Calle San Francisco",
+          "telefono": "959538830",
+          "tipo_usuario": "arrendatario",
+          "correo_electronico": "sr@correo.cl"
+        }
+      },
+      {
+        "model": "app.usuario",
+        "pk": 8,
+        "fields": {
+          "nombres": "Siober",
+          "apellidos": "Sanchez",
+          "rut": "265152163",
+          "direccion": "Calle San Francisco",
+          "telefono": "959538830",
+          "tipo_usuario": "arrendatario",
+          "correo_electronico": "davir@correo.cl"
+        }
+      },
+      {
+        "model": "app.usuario",
+        "pk": 9,
+        "fields": {
+          "nombres": "Siober",
+          "apellidos": "Sanchez",
+          "rut": "265152168",
+          "direccion": "Calle San Francisco",
+          "telefono": "959538830",
+          "tipo_usuario": "arrendatario",
+          "correo_electronico": "carolr@correo.cl"
+        }
+      },
+      {
+        "model": "app.usuario",
+        "pk": 10,
+        "fields": {
+          "nombres": "Siober",
+          "apellidos": "Sanchez",
+          "rut": "265152166",
+          "direccion": "Calle San Francisco",
+          "telefono": "959538830",
+          "tipo_usuario": "arrendatario",
+          "correo_electronico": "neska@correo.cl"
+        }
+      }
+
+
+]
