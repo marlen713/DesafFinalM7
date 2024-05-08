@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import registro_usuario,index,detalle_inmueble, generar_solicitud_arriendo,alta_inmueble,solicitudes_arrendador
+from app.views import index,registro_usuario,detalle_inmueble, generar_solicitud_arriendo,alta_inmueble,solicitudes_arrendador
 from django.contrib.auth.views import LoginView, LogoutView
 from django.conf.urls.static import static
 

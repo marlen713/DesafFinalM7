@@ -12,12 +12,10 @@
         <div class="card-body">
           <h5 class="card-title">{{inm.nombre}}</h5>
           <p class="card-text">{{inm.descripcion}}</p>
+          <p>{{inm.comuna}} </p>
           <li><a href="{% url 'detalle' inm.id %}">detalle del inmueble</a></li>
         </div>
       </div>
     {% endfor %}
-
-   
-
 
 {% endblock %}

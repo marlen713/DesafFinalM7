@@ -17,11 +17,8 @@
             <li><a href="{% url 'registro_usuario' %}">Registro</a></li>
             {% if user.is_authenticated and user.usuario.tipo_usuario == 'arrendador' %}
             <li><a href="{% url 'alta_inmueble' %}">Alta de Inmueble</a></li>
-            {% endif %}
-            {% if user.is_authenticated and user.usuario.tipo_usuario == 'arrendador' %}
             <li><a href="{% url 'solicitudes_arrendador' %}">solicitudes de arriendo</a></li>
             {% endif %}
-            
         </ul>
         {% if request.user.is_authenticated %}
         <p>Bienvenido, {{ user.username }} eres un {{user.usuario.tipo_usuario}}</p> <!-- Muestra el nombre completo del usuario -->

@@ -1,0 +1,27 @@
+Region: Biobío
+Inmueble: Esmeralda Inn
+Descripcion: Ampllio Dpto
+
+Region: Metropolitana de Santiago
+Inmueble: Mansion
+Descripcion: Hermosa mansion
+Inmueble: Town House
+Descripcion: Bello Town House
+Inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+Inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+Inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+Inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+Inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+Inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+
+Region: Tarapacá
+Inmueble: San Francisco INN
+Descripcion: Tipo Estudio
+Inmueble: San Francisco INN
+Descripcion: Tipo Estudio

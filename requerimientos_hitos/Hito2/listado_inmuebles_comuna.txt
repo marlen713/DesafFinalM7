@@ -1,0 +1,44 @@
+Comuna: Iquique
+Nombre del inmueble: San Francisco INN
+Descripcion: Tipo Estudio
+
+Comuna: Iquique
+Nombre del inmueble: San Francisco INN
+Descripcion: Tipo Estudio
+
+Comuna: Las Condes
+Nombre del inmueble: Mansion
+Descripcion: Hermosa mansion
+
+Comuna: Lo Barnechea
+Nombre del inmueble: Town House
+Descripcion: Bello Town House
+
+Comuna: Santiago
+Nombre del inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+
+Comuna: Santiago
+Nombre del inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+
+Comuna: Santiago
+Nombre del inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+
+Comuna: Santiago
+Nombre del inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+
+Comuna: Santiago
+Nombre del inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+
+Comuna: Santiago
+Nombre del inmueble: Diego Inn
+Descripcion: Departamento Amoblado
+
+Comuna: Florida
+Nombre del inmueble: Esmeralda Inn
+Descripcion: Ampllio Dpto
+

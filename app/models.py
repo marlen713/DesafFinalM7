@@ -18,6 +18,19 @@ class Usuario(User):
     def __str__(self):
         return f"{self.nombres} {self.apellidos}" 
 
+class Region(models.Model):
+    nombre = models.CharField(max_length=100)
+    def __str__(self):
+        return self.nombre
+
+
+class Comuna(models.Model):
+    nombre = models.CharField(max_length=100)
+    region = models.ForeignKey(Region, related_name='comunas', on_delete=models.CASCADE)
+    def __str__(self):
+        return self.nombre
+
+
 class Inmueble(models.Model):
     TIPO_INMUEBLE_CHOISES = [
         ('casa', 'Casa'),
@@ -27,9 +40,9 @@ class Inmueble(models.Model):
     nombre=models.CharField(max_length=50)
     direccion=models.CharField(max_length=50)
     descripcion=models.CharField(max_length=50)
-    imagen=models.ImageField(upload_to='')
+    imagen=models.ImageField(upload_to='',null=True, blank=True)
     precio=models.DecimalField(max_digits=10, decimal_places=0)
-    comuna=models.CharField(max_length=50)
+    comuna =models.ForeignKey(Comuna, related_name='inmuebles', on_delete=models.CASCADE)
     disponible=models.BooleanField(default=True)
     m2_construidos=models.DecimalField(max_digits=10, decimal_places=2)
     m2_terreno=models.DecimalField(max_digits=10, decimal_places=2)

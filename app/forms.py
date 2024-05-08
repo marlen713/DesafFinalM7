@@ -15,8 +15,7 @@ class InmuebleForm(forms.ModelForm):
         exclude = ('propietario',)  # Excluimos el campo 'propietario' del formulario
 
     
-     
-        
+
 class SolicitudArriendoForm(forms.ModelForm):
     class Meta:
         model = SolicitudArriendo

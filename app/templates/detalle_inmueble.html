@@ -1,10 +1,20 @@
 {% extends 'base.html' %}
 
+
 {% block title %}Página de Inicio{% endblock %}
+{% load static %}
 {% block content %}
-    {{inmuebles.nombre}}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/media/{{inmueble.imagen}}">
+        <div class="card-body">
+          <h5 class="card-title">{{inmueble.nombre}}</h5>
+          <p class="card-text">{{inmueble.descripcion}}</p>
+          <p>{{inmueble.comuna}}</p>
+        </div>
+      </div>
+
     {% if user.usuario.tipo_usuario == 'arrendatario' %}
-    <a href="{% url 'generar_solicitud_arriendo' inmuebles.id %}">Generar Solicitud de Arriendo</a>
-{% endif %}
+    <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
+    {% endif %}
     
 {% endblock %}

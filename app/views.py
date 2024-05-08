@@ -1,26 +1,20 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
-from app.models import SolicitudArriendo , Inmueble, Usuario
+from app.models import SolicitudArriendo, Inmueble, Usuario
 from .forms import RegistroUsuarioForm,SolicitudArriendoForm,InmuebleForm
 
 
-
 # Create your views here.
-
 def index(request):
     inmuebles = Inmueble.objects.all()
     usuario = request.user
     return render(request, 'index.html',{'inmuebles': inmuebles})
 
-
-
 @login_required
 def detalle_inmueble(request, id):
     inmueble = Inmueble.objects.get (pk=id)
-    return render(request,'detalle_inmueble.html',{'inmuebles':inmueble})
-
-
+    return render(request,'detalle_inmueble.html',{'inmueble':inmueble})
 
 
 def registro_usuario(request):
@@ -39,6 +33,7 @@ def registro_usuario(request):
     else:
         form = RegistroUsuarioForm()
     return render(request, 'registro_usuario.html', {'form': form})
+
 
 @login_required
 def generar_solicitud_arriendo(request, id):
@@ -61,9 +56,7 @@ def generar_solicitud_arriendo(request, id):
         return render(request, 'generar_solicitud_arriendo.html', {'form': form})
     else:
         return redirect('index')
-    
-    
-    
+
 @login_required
 def solicitudes_arrendador(request):
     # Verificar si el usuario es un arrendador
@@ -73,20 +66,20 @@ def solicitudes_arrendador(request):
         return render(request, 'solicitudes_arrendador.html', {'solicitudes': solicitudes})
     else:
         # Redirigir a otra página si el usuario no es un arrendador
-        return redirect('index')  
-  
-  
+        return redirect('index')    
+    
+    
 @login_required
 def alta_inmueble(request):
     if request.method == 'POST':
-        form = InmuebleForm(request.POST)
+        form = InmuebleForm(request.POST, request.FILES)
         print(form)
-        if form.is_valid():
-            
+        if form.is_valid():            
             inmueble = form.save(commit=False)
-            inmueble.propietario = request.user
+            inmueble.propietario = request.user.usuario
             inmueble.save()
-            return redirect('inicio') 
+            return redirect('detalle', id=inmueble.id) 
     else:
         form = InmuebleForm()
     return render(request, 'alta_inmueble.html', {'form': form})
+
