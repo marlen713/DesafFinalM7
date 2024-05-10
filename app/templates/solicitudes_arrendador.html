@@ -7,9 +7,9 @@
 <ul>
     {% for solicitud in solicitudes %}
     <li>
-        <p>Arrendatario: {{solicitud.arrendatario}}</p>
-        <p>Inmueble: {{solicitud.inmueble}}</p>
-        <p>Mensaje: {{solicitud.mensaje}}</p>
+        <p>Arrendatario: {{ solicitud.arrendatario }}</p>
+        <p>Inmueble: {{ solicitud.inmueble }}</p>
+        <p>Mensaje: {{ solicitud.mensaje }}</p>
     </li>
     {% empty %}
     <li>No hay solicitudes recibidas.</li>
