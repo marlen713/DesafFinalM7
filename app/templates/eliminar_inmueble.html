@@ -1,0 +1,10 @@
+{% block title %}Página de Inicio{% endblock %}
+
+{% block content %}
+<h2>Eliminar Inmueble</h2>
+    <p>¿Estás seguro de que deseas eliminar el inmueble "{{ inmueble.nombre }}"?</p>
+    <form method="post">
+        {% csrf_token %} 
+        <button type="submit">Eliminar</button>
+    </form>
+{% endblock %}

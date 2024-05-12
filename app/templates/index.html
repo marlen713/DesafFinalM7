@@ -15,8 +15,8 @@
               <div class="card-body">
                 <h5 class="card-title">{{ inm.name }}</h5>
                 <p class="card-text text-justify">
-                    {% if inm.descripcion|length > 100 %}
-                        {{ inm.descripcion|slice:":100" }}... <a href="">descripcion</a>
+                    {% if inm.descripcion|length > 10 %}
+                        {{ inm.descripcion|slice:":10" }}... <a href="">descripcion</a>
                     {% else %}
                         {{ inm.descripcion}}
                     {% endif %}

@@ -1,10 +1,9 @@
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.decorators import login_required
-from app.models import SolicitudArriendo , Inmueble,Region,Comuna
-from .forms import CustomUserChangeForm, RegistroUsuarioForm,SolicitudArriendoForm,InmuebleForm
+from app.models import SolicitudArriendo, Inmueble, Region, Comuna
+from .forms import CustomUserChangeForm, RegistroUsuarioForm, SolicitudArriendoForm, InmuebleForm
 
 
 
@@ -76,10 +75,10 @@ def solicitudes_arrendador(request):
     else:
         # Redirigir a otra página si el usuario no es un arrendador
         return redirect('index')  
-  
-  
+
+
 @login_required
-def alta_inmueble(request):
+def crear_inmueble(request):
     if request.method == 'POST':
         form = InmuebleForm(request.POST, request.FILES)
         print(form)
@@ -90,8 +89,32 @@ def alta_inmueble(request):
             return redirect('dashboard') 
     else:
         form = InmuebleForm()
-    return render(request, 'alta_inmueble.html', {'form': form})
+    return render(request, 'crear_inmueble.html', {'form': form})
 
+
+@login_required
+def actualizar_inmueble(request, id):
+    inmueble = get_object_or_404(Inmueble, pk=id)
+    if request.method == 'POST':
+        form = InmuebleForm(request.POST, request.FILES, instance=inmueble)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard') 
+    else:
+        form = InmuebleForm(instance=inmueble)
+    return render(request, 'editar_inmueble.html',{'form': form})
+
+
+@login_required
+def eliminar_inmueble(request, id):
+    inmueble = get_object_or_404(Inmueble, pk=id)
+    if request.method == 'POST':
+        inmueble.delete()
+        return redirect('dashboard')
+    else:
+        return render(request,'eliminar_inmueble.html', {'inmueble':inmueble})
+
+    
 
 @login_required
 def dashboard(request):
@@ -131,6 +154,7 @@ def actualizar_usuario(request):
     return render(request, 'perfil.html', {'form': form})
 
 
+@login_required
 def cambiar_estado_solicitud(request, solicitud_id):
     solicitud = get_object_or_404(SolicitudArriendo, pk=solicitud_id)
     if solicitud.inmueble.propietario == request.user.usuario:

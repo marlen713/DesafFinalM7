@@ -12,9 +12,13 @@
           <p>{{inmueble.comuna}}</p>
         </div>
       </div>
-
     {% if user.usuario.tipo_usuario == 'arrendatario' %}
     <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
+    {% endif %}
+
+    {% if user.usuario.tipo_usuario == 'arrendador' %}
+    <a href="{% url 'editar_inmueble' inmueble.id %}" onclick="return confirm('¿editar?');">editar Inmueble</a>
+    <a href="{% url 'eliminar_inmueble' inmueble.id %}" onclick="return confirm('¿quieres eliminar?');">eliminar Inmueble</a>
     {% endif %}
     
 {% endblock %}

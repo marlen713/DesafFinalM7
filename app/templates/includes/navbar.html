@@ -15,7 +15,7 @@
                 </li>
                 {% if user.is_authenticated and user.usuario.tipo_usuario == 'arrendador' %}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'alta_inmueble' %}">alta inmueble</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'crear_inmueble' %}">Crear inmueble</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'solicitudes_arrendador' %}">solicitud</a>

@@ -1,12 +1,10 @@
-{% extends 'base.html' %}
-
 {% block title %}Página de Inicio{% endblock %}
 
 {% block content %}
-<h2>Alta de Inmueble</h2>
+<h2>Editar Inmueble</h2>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Guardar</button>
+    <button type="submit">Editar</button>
 </form>
 {% endblock %}

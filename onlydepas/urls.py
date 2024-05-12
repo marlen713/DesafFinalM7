@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from app.views import index,registro_usuario,detalle_inmueble, generar_solicitud_arriendo,alta_inmueble,solicitudes_arrendador,dashboard,actualizar_usuario,cambiar_estado_solicitud
+from app.views import actualizar_usuario,actualizar_inmueble,eliminar_inmueble,registro_usuario,index,detalle_inmueble, cambiar_estado_solicitud,generar_solicitud_arriendo,crear_inmueble,solicitudes_arrendador,dashboard 
 from django.contrib.auth.views import LoginView, LogoutView
 from django.conf.urls.static import static
-
 from onlydepas import settings
 
 urlpatterns = [
@@ -31,11 +30,15 @@ urlpatterns = [
     path('inmueble/<int:id>',detalle_inmueble , name='detalle'),
     
     path('inmuebles/<int:id>/generar-solicitud/', generar_solicitud_arriendo, name='generar_solicitud_arriendo'),
-    path('alta-inmueble/', alta_inmueble, name='alta_inmueble'),
+    
+    path('inmueble/<int:id>/editar_inmueble/', actualizar_inmueble, name='editar_inmueble'),
+    path('inmueble/<int:id>/eliminar_inmueble/', eliminar_inmueble, name='eliminar_inmueble'),
+    
+    path('crear_inmueble/', crear_inmueble, name='crear_inmueble'),
     path('solicitudes/', solicitudes_arrendador, name='solicitudes_arrendador'),
     
     path('dashboard/', dashboard, name='dashboard'),
     path('perfil/', actualizar_usuario, name='actualizar_usuario'),
-     path('cambiar_estado_solicitud/<int:solicitud_id>/', cambiar_estado_solicitud, name='cambiar_estado_solicitud'),
+    path('cambiar_estado_solicitud/<int:solicitud_id>/', cambiar_estado_solicitud, name='cambiar_estado_solicitud'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
