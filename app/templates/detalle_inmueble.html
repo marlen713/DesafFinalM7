@@ -4,7 +4,7 @@
 {% block title %}Página de Inicio{% endblock %}
 {% load static %}
 {% block content %}
-    <div class="card" style="width: 18rem;">
+    <div class="card mt-5 pt-5" style="width: 18rem;">
         <img class="card-img-top" src="/media/{{inmueble.imagen}}">
         <div class="card-body">
           <h5 class="card-title">{{inmueble.nombre}}</h5>
@@ -13,12 +13,12 @@
         </div>
       </div>
     {% if user.usuario.tipo_usuario == 'arrendatario' %}
-    <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}">Generar Solicitud de Arriendo</a>
+    <a href="{% url 'generar_solicitud_arriendo' inmueble.id %}" class="mx-4 mt-2 btn btn-dark">Generar Solicitud de Arriendo</a>
     {% endif %}
 
     {% if user.usuario.tipo_usuario == 'arrendador' %}
-    <a href="{% url 'editar_inmueble' inmueble.id %}" onclick="return confirm('¿editar?');">editar Inmueble</a>
-    <a href="{% url 'eliminar_inmueble' inmueble.id %}" onclick="return confirm('¿quieres eliminar?');">eliminar Inmueble</a>
+    <a href="{% url 'editar_inmueble' inmueble.id %}" onclick="return confirm('¿editar?');" class="btn btn-dark mt-2">Editar Inmueble</a>
+    <a href="{% url 'eliminar_inmueble' inmueble.id %}" onclick="return confirm('¿quieres eliminar?');" class="btn btn-dark mt-2">Eliminar Inmueble</a>
     {% endif %}
     
 {% endblock %}

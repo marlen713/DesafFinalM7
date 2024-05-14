@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h2>Dashboard - Arrendatario</h2>
+    <h2 class="mt-5 pt-5">Dashboard - Arrendatario</h2>
     <form method="GET" action="{% url 'dashboard' %}">
         <label for="region">Región:</label>
         <select name="region" id="region">
@@ -32,14 +32,14 @@
                       <h5 class="card-title">{{ inm.name }}</h5>
                       <p class="card-text text-justify">
                           {% if inm.descripcion|length > 100 %}
-                              {{ inm.descripcion|slice:":100" }}... <a href="">descripcion</a>
+                              {{ inm.descripcion|slice:":100" }}... 
                           {% else %}
                               {{ inm.descripcion}}
                           {% endif %}
                       </p>
                   </div>
-                    <div class="card-footer">
-                      <a href="{% url 'detalle' inm.id %}">detalle del inmueble</a>
+                    <div class="card-footer"style="background-color: #0081C9;">
+                      <a href="{% url 'detalle' inm.id %}" style="color: white;">detalle del inmueble</a>
                     </div>
                   </div>
                 </div>

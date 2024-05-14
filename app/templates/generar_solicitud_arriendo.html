@@ -3,7 +3,7 @@
 {% block title %}Página de Inicio{% endblock %}
 {% load static %}
 {% block content %}
-<h1>Generar Solicitud de Arriendo</h1>
+<h1 class="mt-5 pt-5">Generar Solicitud de Arriendo</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

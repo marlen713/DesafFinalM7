@@ -39,7 +39,7 @@ class Inmueble(models.Model):
     ]    
     nombre=models.CharField(max_length=50)
     direccion=models.CharField(max_length=50)
-    descripcion=models.CharField(max_length=50)
+    descripcion=models.CharField(max_length=300)
     imagen=models.ImageField(upload_to='',null=True, blank=True)
     precio=models.DecimalField(max_digits=10, decimal_places=0)
     comuna =models.ForeignKey(Comuna, related_name='inmuebles', on_delete=models.CASCADE)

@@ -3,7 +3,7 @@
 {% block title %}Página de Inicio{% endblock %}
 
 {% block content %}
-<h2>Crear Nuevos Inmueble</h2>
+<h2 class="mt-5 pt-5">Crear Nuevos Inmueble</h2>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}

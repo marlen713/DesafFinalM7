@@ -2,7 +2,7 @@
 {% block content %}
   {% if user.usuario.tipo_usuario == 'arrendador' %}
   
-  <h2>Tus Inmuebles</h2>
+  <h2 class="mt-5 pt-5 px-5">Tus Inmuebles</h2>
   <section class="container mx-auto pt-5">
     <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
       {% for inm in inmuebles %}
@@ -14,14 +14,14 @@
               <h5 class="card-title">{{ inm.name }}</h5>
               <p class="card-text text-justify">
                   {% if inm.descripcion|length > 100 %}
-                      {{ inm.descripcion|slice:":100" }}... <a href="">descripcion</a>
+                      {{ inm.descripcion|slice:":100" }}... 
                   {% else %}
                       {{ inm.descripcion}}
                   {% endif %}
               </p>
           </div>
-            <div class="card-footer">
-              <a href="{% url 'detalle' inm.id %}">detalle del inmueble</a>
+            <div class="card-footer" style="background-color: #0081C9;">
+              <a href="{% url 'detalle' inm.id %}" style="color: white;">detalle del inmueble</a>
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@
     </div>
   </section>
    
-      <h2>Solicitudes Recibidas</h2>
+      <h2 class="pt-5 px-5">Solicitudes Recibidas</h2>
       <section class="container mx-auto pt-5">
           <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
               {% for solicitud in solicitudes_recibidas %}

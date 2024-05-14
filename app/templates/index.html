@@ -3,8 +3,8 @@
 {% block title %}Página de Inicio{% endblock %}
 {% load static %}
 {% block content %}
-    <h2>Bienvenido a mi sitio web!</h2>
-    <p>Este es el contenido de la página de inicio.</p>
+    <h2 class="text-center mt-5 pt-5">Bienvenido a mi sitio web!</h2>
+    <p class="text-center fw-light h4">Encuentra casas y departamentos</p>
     <section class="container mx-auto pt-5">
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
         {% for inm in inmuebles %}
@@ -15,15 +15,15 @@
               <div class="card-body">
                 <h5 class="card-title">{{ inm.name }}</h5>
                 <p class="card-text text-justify">
-                    {% if inm.descripcion|length > 10 %}
-                        {{ inm.descripcion|slice:":10" }}... <a href="">descripcion</a>
+                    {% if inm.descripcion|length > 50 %}
+                        {{ inm.descripcion|slice:":50" }}...
                     {% else %}
                         {{ inm.descripcion}}
                     {% endif %}
                 </p>
             </div>
-              <div class="card-footer">
-                <a href="{% url 'detalle' inm.id %}">detalle del inmueble</a>
+              <div class="card-footer" style="background-color: #0081C9;">
+                <a href="{% url 'detalle' inm.id %}" style="color: white;">detalle del inmueble</a>
               </div>
             </div>
           </div>
