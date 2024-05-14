@@ -7,3 +7,5 @@ Hoy 05/05/2024 AGREGUE CAPTURE DEL HITO 1 "Para que este pueda ser evaluado"
 10/05/2024 Se agrego Requerimientos del Hito 3
 
 11/05/2024 Agregando el Hito 4
+
+14/05/2024 Agregando el Hito 5, el dia de la presentacion mostrando como quedo la pagina
