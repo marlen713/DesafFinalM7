@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'desaffinalm7.onrender.com']
-CSRF_TRUSTED_ORIGINS = ['http://desaffinalm7.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://desaffinalm7.onrender.com']
 
 LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'login'   #ojo uso esto para que si no estoy logueada lapagina me redicione alli
