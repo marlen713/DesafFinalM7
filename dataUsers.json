@@ -1,16 +1,16 @@
 [
     {
         "model": "auth.user",
-        "pk": 5,
+        "pk": 1,
         "fields": {
           "password": "pbkdf2_sha256$600000$9dkXxzIynhrslEznFuQN0U$jgIzeuR/2lyjHhVevVewddJhfR2M7d1VFTFCnbkAMUI=",
           "last_login": "2024-05-06T19:03:39.606Z",
-          "is_superuser": false,
-          "username": "Davia",
+          "is_superuser": true,
+          "username": "admin",
           "first_name": "",
           "last_name": "",
           "email": "",
-          "is_staff": false,
+          "is_staff": true,
           "is_active": true,
           "date_joined": "2024-05-06T19:03:38.060Z",
           "groups": [],
