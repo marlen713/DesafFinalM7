@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'http://desaffinalm7.onrender.com','desaffinalm7.onrender.com']
+ALLOWED_HOSTS = ['*', 'desaffinalm7.onrender.com']
 CSRF_TRUSTED_ORIGINS = ['http://desaffinalm7.onrender.com']
 
 LOGIN_REDIRECT_URL = 'index'
